@@ -21,6 +21,9 @@ const io = new Server(server, {
         origin: "*",
     },
 });
+app.get("/", (req, res) => {
+    res.send("Server is running");
+});
 
 // Routes
 app.use("/api/auth", authRoutes);
